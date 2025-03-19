@@ -13,13 +13,23 @@
         <nav class="navbar">
             <div class="logo">CPA Ouma <span>Miruka</span></div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#masterclass">Masterclass</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+              <li><a href="#home">Home</a></li>
+              <li class="services-dropdown">
+                  <a href="#services" class="dropdown-toggle">Services <span class="dropdown-icon">▼</span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#services">Remote Bookkeeping</a></li>
+                      <li><a href="#services">QuickBooks Training</a></li>
+                      <li><a href="#services">Tax Preparation</a></li>
+                      <li><a href="#services">Accounting Tutoring</a></li>
+                      <li><a href="#services">Financial Analysis</a></li>
+                      <li><a href="#services">Consulting Services</a></li>
+                  </ul>
+              </li>
+              <li><a href="#masterclass">Masterclass</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -426,6 +436,31 @@
       </form>
     </div>
   </div>
+
+<!-- Replace the existing floating contact widget with this code -->
+<div class="floating-contact">
+  <button class="contact-toggle">
+      <img src="images/CPA Miruka.png" alt="CPA Ouma Miruka" class="contact-profile">
+      <div class="pulse-ring"></div>
+  </button>
+  <div class="contact-options">
+      <div class="contact-header">
+          <img src="images/CPA Miruka.png" alt="CPA Ouma Miruka" class="contact-header-img">
+          <div class="contact-header-text">
+              <h4>CPA Ouma Miruka</h4>
+              <p>Online • Ready to help</p>
+          </div>
+      </div>
+      <a href="https://wa.me/1234567890" target="_blank" class="contact-option whatsapp">
+          <span class="option-icon">📱</span>
+          <span class="option-text">Chat on WhatsApp</span>
+      </a>
+      <a href="mailto:email@example.com" class="contact-option email">
+          <span class="option-icon">📧</span>
+          <span class="option-text">Send Email</span>
+      </a>
+  </div>
+</div>
 
     <!-- Scripts -->
 

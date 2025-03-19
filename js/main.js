@@ -58,3 +58,48 @@
     });
   });
   
+
+/* filepath: /c:/Users/user/Documents/CPA OUMA MIRUKA/js/main.js */
+// Update the floating contact widget JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const contactToggle = document.querySelector('.contact-toggle');
+    const contactOptions = document.querySelector('.contact-options');
+    let isOpen = false;
+
+    contactToggle.addEventListener('click', () => {
+        isOpen = !isOpen;
+        contactOptions.classList.toggle('active');
+        
+        // Add bounce animation on toggle
+        if (isOpen) {
+            contactToggle.style.animation = 'bounce 0.5s ease';
+        } else {
+            contactToggle.style.animation = '';
+        }
+    });
+
+    // Close contact options when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.floating-contact')) {
+            contactOptions.classList.remove('active');
+            isOpen = false;
+        }
+    });
+});
+
+// Add bounce animation keyframes
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+`;
+document.head.appendChild(style);
